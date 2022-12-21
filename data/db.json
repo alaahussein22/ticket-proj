@@ -1,0 +1,158 @@
+{
+  "data": [
+    {
+      "from": "Siwa",
+      "to": "Cairo",
+      "time_out": "2",
+      "time_return": "12",
+      "out": "2022-12-19",
+      "return": "2022-12-19",
+      "person_num": "2",
+      "ticket_price": "100 LE"
+    },
+    {
+      "from": "Cairo",
+      "to": "Siwa",
+      "time_out": "10",
+      "time_return": "5",
+      "out": "2022-12-20",
+      "return": "2022-12-20",
+      "person_num": "2",
+      "ticket_price": "100 LE"
+    },
+    {
+      "from": "Alexandria",
+      "to": "Cairo",
+      "time_out": "8",
+      "time_return": "11",
+      "out": "2022-12-12",
+      "return": "2022-12-12",
+      "person_num": "3",
+      "ticket_price": "50 LE"
+    },
+    {
+      "from": "Cairo",
+      "to": "El-Mansora",
+      "time_out": "5",
+      "time_return": "8",
+      "out": "2022-1-1",
+      "return": "2022-1-1",
+      "person_num": "2",
+      "ticket_price": "15 LE"
+    },
+    {
+      "from": "Ismalia",
+      "to": "El-Mansora",
+      "time_out": "4",
+      "time_return": "6",
+      "out": "2022-1-9",
+      "return": "2022-1-9",
+      "person_num": "1",
+      "ticket_price": "20 LE"
+    },
+
+    {
+      "from": "Fayoum",
+      "to": "Luxur",
+      "time_out": "2",
+      "time_return": "8",
+      "out": "2022-1-20",
+      "return": "2022-1-20",
+      "person_num": "4",
+      "ticket_price": "150 LE"
+    },
+    {
+      "from": "Luxur",
+      "to": "Cairo",
+      "time_out": "10",
+      "time_return": "6",
+      "out": "2022-2-11",
+      "return": "2022-2-11",
+      "person_num": "1",
+      "ticket_price": "200 LE"
+    },
+    {
+      "from": "Zagazig",
+      "to": "Alexandria ",
+      "time_out": "6",
+      "time_return": "10",
+      "out": "2022-3-15",
+      "return": "2022-3-15",
+      "person_num": "10",
+      "ticket_price": "66 LE"
+    },
+    {
+      "from": "Tanta",
+      "to": "Matroh",
+      "time_out": "7",
+      "time_return": "10",
+      "out": "2022-5-7",
+      "return": "2022-5-7",
+      "person_num": "6",
+      "ticket_price": "100 LE"
+    },
+    {
+      "from": "Demmiet",
+      "to": "Cairo",
+      "time_out": "9",
+      "time_return": "12",
+      "out": "2022-3-1",
+      "return": "2022-3-1",
+      "person_num": "3",
+      "ticket_price": "30 LE"
+    },
+    {
+      "from": "Cairo",
+      "to": "Sharm elshikh",
+      "time_out": "2",
+      "time_return": "12",
+      "out": "2022-12-19",
+      "return": "2022-12-19",
+      "person_num": "2",
+      "ticket_price": "300 LE"
+    },
+    {
+      "from": "Aswan",
+      "to": "Asuit",
+      "time_out": "10",
+      "time_return": "5",
+      "out": "2022-2-18",
+      "return": "2022-2-19",
+      "person_num": "12",
+      "ticket_price": "250 LE"
+    },
+    {
+      "from": "Banha",
+      "to": "Zagazig",
+      "time_out": "3",
+      "time_return": "4",
+      "out": "2022-3-22",
+      "return": "2022-3-22",
+      "person_num": "3",
+      "ticket_price": "10 LE"
+    },
+
+     {
+      "from": "Port Said",
+      "to": "Fayoum",
+      "time_out": "2",
+      "time_return": "6",
+      "out": "2022-12-25",
+      "return": "2022-12-25",
+      "person_num": "2",
+      "ticket_price": "60 LE"
+    },
+
+    {
+      "from": "Ismalia",
+      "to": "Siwa",
+      "time_out": "8",
+      "time_return": "1",
+      "out": "2022-2-19",
+      "return": "2022-2-19",
+      "person_num": "2",
+      "ticket_price": "170 LE"
+    }
+   
+  ]
+}
