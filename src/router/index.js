@@ -6,28 +6,29 @@ import Login from '../views/login.vue'
 import contactUS from '../views/contact-us.vue'
 Vue.use(VueRouter)
 
-const routes = [
-  {
+const routes = [{
     path: '/',
     name: 'HomeC',
     component: HomeView,
   },
 
-    {
-      path: '/ticket',
-      name: 'ticketC',
-      component: TicketProcess,
-    },
-    {
-      path: '/contactUS',
-      name: 'contactUS',
-      component: contactUS,
-    },
-    {
-      path: '/login',
-      name: 'loginC',
-      component: Login,
-    },
+  {
+    path: '/contactUS',
+    name: 'contactUS',
+    component: contactUS,
+  },
+  {
+    path: '/login',
+    name: 'loginC',
+    component: Login,
+  },
+  {
+    path: '/ticket',
+    name: 'ticketC',
+    component: TicketProcess,
+    props: true,
+
+  },
 ]
 
 const router = new VueRouter({

@@ -1,20 +1,22 @@
 <template>
-<div>
-    <h1>{{ trainData }}</h1>
-</div>
+  <div>
+    <h3 class="mt-5">{{ ticketDetails }}</h3>
+  </div>
 </template>
 
-
 <script>
+export default {
+  name: "ticketC",
+  props: ["data"],
+  data() {
+    return {
+      ticketDetails: [],
+    };
+  },
 
-export default{
-      name: 'ticketC',
-      props:["trainData"],
-    data() {
-       return{
-        ticket:this.trainData
-       }  
-    },
-}
+  created() {
+    this.ticketDetails = this.data;
+    console.log(this.ticketDetails);
+  },
+};
 </script>
-

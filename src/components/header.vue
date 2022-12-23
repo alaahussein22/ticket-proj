@@ -1,5 +1,5 @@
 <template>
-  <div class="bbb">
+  <div class="bbb mt-5">
     <section class="about container">
       <div class="row">
         <div class="lorem col-md-4">

@@ -1,21 +1,25 @@
 <template>
   <div>
-
-  <Navbar />
-  <Header />
-  <!-- <Footer /> -->
-
-</div>
-
+    <Navbar />
+    <Header />
+    <!-- <Footer /> -->
+  </div>
 </template>
 
 <script>
 import Navbar from "../components/navbar.vue";
 import Header from "../components/header.vue";
-// import Footer from '../components/footer.vue'
+
 export default {
   name: "HomeC",
 
-  components: { Navbar,Header},
+  components: { Header ,Navbar},
 };
 </script>
+
+<style scoped>
+.v-toolbar__content,
+.v-toolbar__extension {
+  z-index: 1;
+}
+</style>
