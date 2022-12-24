@@ -4,6 +4,7 @@ import HomeView from '../views/HomeView.vue'
 import TicketProcess from '../views/ticket-process.vue'
 import Login from '../views/login.vue'
 import contactUS from '../views/contact-us.vue'
+import Register from '../views/register.vue'
 Vue.use(VueRouter)
 
 const routes = [{
@@ -21,6 +22,11 @@ const routes = [{
     path: '/login',
     name: 'loginC',
     component: Login,
+  },
+  {
+    path: '/register',
+    name: 'registerC',
+    component: Register,
   },
   {
     path: '/ticket',

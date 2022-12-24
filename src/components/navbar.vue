@@ -120,7 +120,7 @@
               </v-col>
               <v-col cols="12" md="12">
                 <router-link
-                  :to="{ name: 'ticketC', params: { data:trainData } }"
+                  :to="{ name: 'ticketC', params: { data:trainData} }"
                 >
 
                   <v-btn
@@ -374,8 +374,9 @@ export default {
           },
         })
         .then((res) => {
-          console.log(res.data);
-          this.trainData = res.data;
+          console.log(  (JSON.stringify( res.data) ))
+
+          this.trainData = (JSON.stringify(res.data))
         })
         .catch((err) => {
           console.log(err);

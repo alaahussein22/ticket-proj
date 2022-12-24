@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h3 class="mt-5">{{ ticketDetails }}</h3>
+    <h3 class="mt-5" >{{ ticketDetails }}</h3>
   </div>
 </template>
 
@@ -10,13 +10,13 @@ export default {
   props: ["data"],
   data() {
     return {
-      ticketDetails: [],
+      ticketDetails: this.data,
     };
   },
 
   created() {
-    this.ticketDetails = this.data;
-    console.log(this.ticketDetails);
+
+
   },
 };
 </script>

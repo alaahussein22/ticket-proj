@@ -65,6 +65,16 @@
           >
             clear
           </v-btn>
+
+          <router-link to="/register">
+            <v-btn
+            class="mr-4 mt-4 "
+            type="submit"
+            style="background-color: #00a88f; border-radius: 25px;margin-left: 41%;"
+          >
+            Create Account
+          </v-btn>
+          </router-link>
         </form>
       </validation-observer>
     </section>
@@ -133,6 +143,8 @@ export default {
   methods: {
     submit() {
       this.$refs.observer.validate();
+      alert('You Login Successfully')
+
     },
     clear() {
       this.name = "";
