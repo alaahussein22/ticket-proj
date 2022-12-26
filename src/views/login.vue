@@ -18,7 +18,7 @@
               :error-messages="errors"
               label="Name"
               required
-            
+
             ></v-text-field>
           </validation-provider>
           <validation-provider
@@ -70,7 +70,7 @@
             <v-btn
             class="mr-4 mt-4 "
             type="submit"
-            style="background-color: #00a88f; border-radius: 25px;margin-left: 41%;"
+            style="background-color: #00a88f; border-radius: 25px;margin-left: 39%;"
           >
             Create Account
           </v-btn>
@@ -155,6 +155,9 @@ export default {
   },
 };
 </script>
+
+
+
 <style scoped>
 img {
   border-radius: 10px;

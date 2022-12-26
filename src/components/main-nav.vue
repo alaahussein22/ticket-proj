@@ -1,6 +1,6 @@
 <template>
     <div>
-        
+
       <v-layout row justify-center>
         <v-toolbar color="white">
           <v-toolbar-title>
@@ -41,7 +41,7 @@
           >
         </v-toolbar>
       </v-layout>
-      
+
     </div>
 </template>
 
@@ -100,14 +100,16 @@ export default{
       ],
       nav: [
         {
-          text: "Basket",
+          text: "Home",
           title: "Back to Home page",
           active: true,
+          to:'/'
         },
         {
-          text: "My Bookings",
+          text: "Get Tickets",
           title: "About this demo",
           active: false,
+          to:'/ticket'
         },
         {
           text: "Contact Us",
