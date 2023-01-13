@@ -2,7 +2,7 @@
     <div class="ggg mt-5 mb-0 d-flex">
       <!-- <div class="user_register container">
   <div class="row"> -->
-  
+
       <section class="userSignIn ms-2 col-md-6">
         <h2>User Sign-Up</h2>
         <validation-observer ref="observer">
@@ -18,7 +18,7 @@
                 :error-messages="errors"
                 label="Name"
                 required
-              
+
               ></v-text-field>
             </validation-provider>
             <validation-provider
@@ -26,13 +26,13 @@
               name="phoneNumber"
               :rules="{
                 required: true,
-                digits: 7,
-                regex: '^(71|72|74|76|81|82|84|85|86|87|88|89)\\d{5}$',
+                digits: 11,
+                regex: '^(010|012|010|011|015)\\d{8}$',
               }"
             >
               <v-text-field
                 v-model="phoneNumber"
-                :counter="7"
+                :counter="11"
                 :error-messages="errors"
                 label="Phone Number"
                 required
@@ -50,7 +50,7 @@
                 required
               ></v-text-field>
             </validation-provider>
-  
+
             <validation-provider
         v-slot="{ errors }"
         name="select"
@@ -83,7 +83,7 @@
           </form>
         </validation-observer>
       </section>
-  
+
       <div class="col-md-6 pho">
         <img
           alt="user"
@@ -92,7 +92,7 @@
           height="auto"
         />
       </div>
-  
+
       <!-- </div>
   </div> -->
     </div>
@@ -105,34 +105,34 @@
     ValidationProvider,
     setInteractionMode,
   } from "vee-validate";
-  
+
   setInteractionMode("eager");
-  
+
   extend("digits", {
     ...digits,
     message: "{_field_} needs to be {length} digits. ({_value_})",
   });
-  
+
   extend("required", {
     ...required,
     message: "{_field_} can not be empty",
   });
-  
+
   extend("max", {
     ...max,
     message: "{_field_} may not be greater than {length} characters",
   });
-  
+
   extend("regex", {
     ...regex,
     message: "{_field_} {_value_} does not match {regex}",
   });
-  
+
   extend("email", {
     ...email,
     message: "Email must be valid",
   });
-  
+
   export default {
     name: "loginC",
     components: {
@@ -151,7 +151,7 @@
         'Aswan',
       ],
     }),
-  
+
     methods: {
       submit() {
         this.$refs.observer.validate();
@@ -176,7 +176,6 @@
   .theme .light .v-messages {
     color: red;
   }
-  
-  
+
+
   </style>
-  

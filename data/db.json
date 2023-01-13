@@ -40,6 +40,20 @@
         "return": "2022-12-12",
         "person_num": "3",
         "ticket_price": "50 LE"
+      },
+      {
+        "from": "Zagazig",
+        "to": "El-Mansora",
+        "time_out1": "6",
+        "time_return1": "9",
+        "time_out2": "9",
+        "time_return2": "12",
+        "time_out3": "12",
+        "time_return3": "3",
+        "out": "2023-1-12",
+        "return": "2023-1-12",
+        "person_num": "4",
+        "ticket_price": "25 LE"
       }
 
 

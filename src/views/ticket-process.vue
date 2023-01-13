@@ -5,11 +5,12 @@
         <h2>Hello Dear!</h2>
         <p class="mt-3">Are You Ready To Book A Ticket ?</p>
         <strong>You Choose ...</strong>
-        <BookingTicket :trainData="trainData" />
+
+          <BookingTicket :trainData="trainData" />
       </div>
 
-      <div class="col-md-8 " style="margin-left:15%;margin-top:1%">
-        <v-card class="mx-auto " max-width="430" height="410">
+      <div class="col-md-8" style="margin-left: 15%; margin-top: 1%">
+        <v-card class="mx-auto" max-width="430" height="410">
           <span class="d-flex">
             <v-col cols="12" md="6">
               <v-select
@@ -120,18 +121,17 @@
     </div>
 
     <About />
-
   </div>
 </template>
 
 <script>
 import axios from "axios";
 import BookingTicket from "./booking-ticket.vue";
-import About from './AboutView.vue'
+import About from "./AboutView.vue";
 
 export default {
   name: "ticketC",
-  components: { BookingTicket,About },
+  components: { BookingTicket, About },
   data() {
     return {
       dialog: false,
@@ -201,6 +201,7 @@ export default {
 
   methods: {
     async getAllData() {
+      console.log("ffffffffffffff");
       await axios
         .get("http://localhost:3000/data", {
           params: {
@@ -222,7 +223,7 @@ export default {
     },
   },
 
-  mounted() {
+  created() {
     this.getAllData();
   },
 };

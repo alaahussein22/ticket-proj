@@ -1,76 +1,81 @@
 <template>
-    <div>
-  <section>
-    <div class="mt-4 d-flex justify-content-between">
-      <h5 class="from">
-        From
-        <v-icon dark right color="black"> mdi-arrow-right </v-icon>
-        {{ from }}
-      </h5>
+  <div>
 
-      <h5 class="to">
-        To
-        <v-icon dark right color="black"> mdi-arrow-right </v-icon>
-        {{ to }}
-      </h5>
-    </div>
+    <section v-for="e in trainData"  :key="e.id">
+      <div class="mt-4 d-flex justify-content-between">
+        <h5 class="from">
+          From
+          <v-icon dark right color="black"> mdi-arrow-right </v-icon>
+          {{ e.from }}
+        </h5>
 
-    <div>
-      <v-card class="mt-5" max-width="385" style="border-radius: 10px">
-        <v-card-text>
-          <p class="text-h6 text--primary">
-            <strong class="cheap">Cheapest</strong> Coach fares
-          </p>
+        <h5 class="to">
+          To
+          <v-icon dark right color="black"> mdi-arrow-right </v-icon>
+          {{ e.to }}
+        </h5>
+      </div>
 
-          <h6>The number of places available : {{ person }}</h6>
-          <h6>Trip departure date: {{ out }}</h6>
-          <h6>Trip return date : {{ ret }}</h6>
+      <div>
+        <v-card class="mt-5" max-width="385" style="border-radius: 10px">
+          <v-card-text>
+            <p class="text-h6 text--primary">
+              <strong class="cheap">Cheapest</strong> Coach fares
+            </p>
 
-          <p class="mt-5">Trip times</p>
-          <div class="text--primary">
-            <hr />
-            <h5 class="d-flex align-items-center">
-              <input type="radio" />
-              <strong class="ms-3">{{ out1 }}</strong>
-              <v-icon dark right color="black"> mdi-arrow-right </v-icon>
-              <strong class="ms-3">{{ return1 }}</strong>
-              <strong class="price">{{ ticket_price }}</strong>
-            </h5>
-            <hr />
+            <span >
+              <h6>
+                The number of places available : {{ e.person_num }}
+              </h6>
+              <h6>Trip departure date: {{ e.out }}</h6>
+              <h6>Trip return date : {{ e.return }}</h6>
 
-            <h5 class="d-flex align-items-center">
-              <input type="radio" />
-              <strong class="ms-3">{{ out2 }}</strong>
-              <v-icon dark right color="black"> mdi-arrow-right </v-icon>
-              <strong class="ms-3">{{ return2 }}</strong>
-              <strong class="price">{{ ticket_price }}</strong>
-            </h5>
-            <hr />
+              <p class="mt-5">Trip times</p>
+              <div class="text--primary">
+                <hr />
+                <h5 class="d-flex align-items-center">
+                  <input type="radio" />
+                  <strong class="ms-3">{{ e.time_out1 }}</strong>
+                  <v-icon dark right color="black"> mdi-arrow-right </v-icon>
+                  <strong class="ms-3">{{ e.time_return1 }}</strong>
+                  <strong class="price">{{ e.ticket_price }}</strong>
+                </h5>
+                <hr />
 
-            <h5 class="d-flex align-items-center">
-              <input type="radio" />
-              <strong class="ms-3">{{ out3 }}</strong>
-              <v-icon dark right color="black"> mdi-arrow-right </v-icon>
-              <strong class="ms-3">{{ return3 }}</strong>
-              <strong class="price">{{ ticket_price }}</strong>
-            </h5>
-            <hr />
+                <h5 class="d-flex align-items-center">
+                  <input type="radio" />
+                  <strong class="ms-3">{{ e.time_out2 }}</strong>
+                  <v-icon dark right color="black"> mdi-arrow-right </v-icon>
+                  <strong class="ms-3">{{ e.time_return2 }}</strong>
+                  <strong class="price">{{ e.ticket_price }}</strong>
+                </h5>
+                <hr />
 
-        <Continue />
-          </div>
-        </v-card-text>
-      </v-card>
-    </div>
-  </section>
-</div>
+                <h5 class="d-flex align-items-center">
+                  <input type="radio" />
+                  <strong class="ms-3">{{ e.time_out3 }}</strong>
+                  <v-icon dark right color="black"> mdi-arrow-right </v-icon>
+                  <strong class="ms-3">{{ e.time_return3 }}</strong>
+                  <strong class="price">{{ e.ticket_price }}</strong>
+                </h5>
+                <hr />
+                <Continue />
+              </div>
+            </span>
+          </v-card-text>
+        </v-card>
+      </div>
+    </section>
 
+
+  </div>
 </template>
 
 <script>
-import Continue from './continue.vue'
+import Continue from "./continue.vue";
 export default {
   name: "bookingC",
-  components:{Continue},
+  components: { Continue },
   props: ["trainData"],
   data() {
     return {
