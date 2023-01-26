@@ -27,8 +27,8 @@
               <h6>
                 The number of places available : {{ e.person_num }}
               </h6>
-              <h6>Trip departure date: {{ e.out }}</h6>
-              <h6>Trip return date : {{ e.return }}</h6>
+              <h6>Trip departure date: {{ outTime }}</h6>
+              <h6>Trip return date : {{ returnTime }}</h6>
 
               <p class="mt-5">Trip times</p>
               <div class="text--primary">
@@ -76,10 +76,11 @@ import Continue from "./continue.vue";
 export default {
   name: "bookingC",
   components: { Continue },
-  props: ["trainData"],
+  props: ["trainData","returnTime","outTime"],
   data() {
     return {
       data: this.trainData,
+
       from: "",
       to: "",
       return1: "",

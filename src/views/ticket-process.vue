@@ -6,7 +6,11 @@
         <p class="mt-3">Are You Ready To Book A Ticket ?</p>
         <strong>You Choose ...</strong>
 
-          <BookingTicket :trainData="trainData" />
+        <BookingTicket
+          :trainData="trainData"
+          :outTime="outTime"
+          :returnTime="returnTime"
+        />
       </div>
 
       <div class="col-md-8" style="margin-left: 15%; margin-top: 1%">
@@ -43,7 +47,7 @@
               >
                 <template v-slot:activator="{ on, attrs }">
                   <v-text-field
-                    v-model="newData.out"
+                    v-model="outTime"
                     label="Out"
                     prepend-icon="mdi-calendar"
                     readonly
@@ -51,7 +55,7 @@
                     v-on="on"
                   ></v-text-field>
                 </template>
-                <v-date-picker v-model="newData.out" no-title scrollable>
+                <v-date-picker v-model="outTime" no-title scrollable>
                   <v-spacer></v-spacer>
                   <v-btn text color="primary" @click="menu = false">
                     Cancel
@@ -73,7 +77,7 @@
               >
                 <template v-slot:activator="{ on, attrs }">
                   <v-text-field
-                    v-model="newData.return"
+                    v-model="returnTime"
                     label="Return"
                     prepend-icon="mdi-calendar"
                     readonly
@@ -81,7 +85,7 @@
                     v-on="on"
                   ></v-text-field>
                 </template>
-                <v-date-picker v-model="newData.return" scrollable>
+                <v-date-picker v-model="returnTime" scrollable>
                   <v-spacer></v-spacer>
                   <v-btn text color="primary" @click="modal = false">
                     Cancel
@@ -191,11 +195,11 @@ export default {
         from: "",
         to: "",
         person_num: "",
-        out: "",
-        return: "",
       },
       trainData: [],
       data: "",
+      outTime: "",
+      returnTime: "",
     };
   },
 
@@ -208,8 +212,6 @@ export default {
             from: this.newData.from,
             to: this.newData.to,
             person_num: this.newData.person_num,
-            out: this.newData.out,
-            return: this.newData.return,
           },
         })
         .then((res) => {
